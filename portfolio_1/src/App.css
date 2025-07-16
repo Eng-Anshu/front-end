@@ -1,0 +1,268 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.hero{
+  height: 100vh;
+  background:linear-gradient(to top left,#0dc73f,#03550e);
+  background-size: cover;
+}
+.hero >.container:first-child{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#profileContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.card-item{
+  margin-block: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px gray;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.card-item:hover{
+  transform: translate(0,-10px);
+}
+.card-body{
+  width: 100%;
+  height: 200px;
+}
+
+.nav-button{
+  display: none;
+}
+.nav-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-right: 50px;
+}
+.item{
+  color: white;
+  cursor: pointer;
+}
+.item:active{
+  color: yellow;
+}
+.navbar{
+  height: 4rem;
+}
+.nav-button{
+  cursor: pointer;
+}
+@media screen and (max-width: 991px) {
+  .hero-desc{
+    width: 500px;
+  }
+  #profileImage{
+    width: 170px;
+  }
+  .details-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .contact-item{
+    width: 30vw;
+    text-align: center;
+  }
+  #aboutContainer{
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 800px){
+  .details-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    gap: 20px;
+  }
+  .contact-item{
+    width: 100vw;
+  }
+}
+
+ @media screen and (max-width: 767px) {
+    #profileContainer{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    #profileImage{
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      margin-block: 30px;
+    }
+    .touch button{
+      width: 140px;
+      height: 40px;
+      font-size: 15px;
+    }
+    .nav-button{
+      display: initial;
+      color: white;
+      margin-right: 30px;
+      font-size: 20px;
+    }
+    .nav-button i:hover{
+      transform: scale(1.1);
+    }
+  .nav-div {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding-right: 0;
+    padding-bottom: 30px;
+    background-color: white;
+    /* background-image: url('./assets/images/hero.png'); */
+    background-size: cover;
+    z-index: 2000;
+    border-top-left-radius: 10px;
+    animation: slidingNavBarOn 1s ease 1 normal forwards;
+}
+
+.nav-div.open {
+  display: flex;
+}
+
+.nav-div .item {
+  color: black;
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+.nav-button i{
+  line-height: 50px;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+.close-btn{
+  height: 50px;
+  text-align: end; 
+}
+.close-btn i{
+  color: black;
+}
+@keyframes slidingNavBarOn {
+  to{
+    right:0;
+  }
+}
+@keyframes slidingNavBarOff {
+  to{
+    right: -100%;
+  }
+}
+}
+@media screen and (max-width: 630px){
+  .touch button:nth-child(2){
+    margin-left: 3rem;
+  }
+  #aboutCard{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  #aboutCard .card-item{
+    width: 300px !important;
+  }
+}
+@media screen and (max-width: 575px){
+  .touch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #contactLink{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-btn{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .datails-div{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 479px) {
+    .touch{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .touch button{
+      width: 300px;
+      height: 30px;
+      font-size: 13px;
+    }
+    #mom{
+    margin-left: 0;
+  }
+  .container:has(#skillContainer){
+    padding: 0;
+  }
+  #skillContainer{
+    width: 100vw;
+    margin: 0;
+  }
+  #skillContainer h1, div{
+    padding: 0;
+  }
+  .skill-item{
+    padding: 0;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .touch button{
+      width: 200px;
+      height: 30px;
+      font-size: 13px;
+  }
+  .contact-btn{
+    width: 200px;
+  }
+  #aboutCard .card-item{
+    width: 250px !important;
+  }
+}
